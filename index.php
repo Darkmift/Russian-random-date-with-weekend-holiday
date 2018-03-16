@@ -111,7 +111,6 @@ mb_internal_encoding('utf-8');
             );
             /////////
             $weekend_days = array(
-                'Friday',
                 'Saturday',
                 'Sunday'
             );
