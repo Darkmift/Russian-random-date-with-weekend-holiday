@@ -1,3 +1,4 @@
+
 <?php
 mb_internal_encoding('utf-8');
 ?>
@@ -17,11 +18,9 @@ mb_internal_encoding('utf-8');
         $random_date = date('n F Y l ', rand($start, $end));
 
         function random_date() {
-
             $start = strtotime('2010-01-01');
             $end = strtotime('2018-01-01');
             $random_date = date('n F Y l ', rand($start, $end));
-
             $days_en = array(
                 'Sunday',
                 'Monday',
@@ -30,7 +29,6 @@ mb_internal_encoding('utf-8');
                 'Thursday',
                 'Friday',
                 'Saturday');
-
             $days_rus = array(
                 'Воскресенье',
                 'Понедельник',
@@ -39,7 +37,6 @@ mb_internal_encoding('utf-8');
                 'Четверг',
                 'Пятница',
                 'Суббота');
-
             $months_en = array(
                 'January',
                 'February',
@@ -54,22 +51,20 @@ mb_internal_encoding('utf-8');
                 'November',
                 'December'
             );
-
             $months_rus = array(
-                'Января',
-                'Февраля',
-                'Марта',
-                'Апреля',
-                'мая',
-                'Июня',
-                'Июля',
-                'Августа',
-                'Сентября',
-                'Октября',
-                'Ноября',
-                'Декабря'
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
             );
-
             $holidays_rus = array(
                 '8 января',
                 '7 января',
@@ -84,12 +79,11 @@ mb_internal_encoding('utf-8');
                 '22 июня',
                 '1 сентября',
                 '27 сентября',
-                '4 ноября',
+                '4 октября',
                 '12 декабря',
                 '31 декабря',
                 '1 января'
             );
-
             $holidays_en = array(
                 '8 January',
                 '7 January',
@@ -115,7 +109,6 @@ mb_internal_encoding('utf-8');
                 'Sunday'
             );
             $is_weekend = false;
-
             for ($i = 0; $i <= count($weekend_days) - 1; $i++) {
                 if (strpos($random_date, $weekend_days[$i]) !== false) {
                     $is_weekend = true;
@@ -149,8 +142,8 @@ mb_internal_encoding('utf-8');
                 $string_result_rus .= ' Это праздник!';
             }
             if ($is_weekend) {
-                $string_result_en .= ' Is a weekend day';
-                $string_result_rus .= ' Это праздник!';
+                $string_result_en .= ' Is a weekend day.';
+                $string_result_rus .= ' День выходного дня.';
             }
             $string = $string_result_en . '<br><br>' . $string_result_rus;
             return $string;
